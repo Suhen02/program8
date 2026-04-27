@@ -7,15 +7,16 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>program8</name>
+  <name>mavenci</name>
   <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compile.source>11</maven.compile.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+
+     <!-- Java version for compiling -->
+    <maven.compiler.source>11</maven.compiler.source>  
+    <maven.compiler.target>11</maven.compiler.target>  
   </properties>
-  
 
   <dependencies>
     <dependency>
@@ -25,20 +26,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <!-- Build section: defines how the project should be built -->
   <build>
-	  <plugins>
-		  <plugin>
-		     <groupId>org.apache.maven.plugins</groupId>
-		     <artifactId>maven-jar-plugin</artifactId>
-		     <version>3.2.2</version>
-		     <configuration>
-			  <archive>
-				  <manifest>
-					  <mainClass>com.program8.App</mainClass>
-				  </manifest>
-			  </archive>
-		  </configuration>
-		  </plugin>
-	  </plugins>
+    <plugins>
+      <!-- Plugin for creating executable JAR files -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.program8.App</mainClass> <!-- 👈 Change to your actual main class -->
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
